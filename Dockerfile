@@ -12,7 +12,7 @@ RUN apk update && apk upgrade && \
         libpq \
         gcc\
         musl-dev\
-    && apk del build-deps/
+    && apk del build-deps
 
 
 ENV LANG C.UTF-8
