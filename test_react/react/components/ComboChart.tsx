@@ -1,9 +1,6 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import {Chart} from 'primereact/chart';
-import 'primereact/resources/themes/nova-light/theme.css';
-import 'primereact/resources/primereact.min.css';
-import 'primeicons/primeicons.css';
 
 export class PieChartDemo extends Component {
 
@@ -70,7 +67,7 @@ export class PieChartDemo extends Component {
 
         return (
             <div>
-                <div className="content-section implementation">
+                <div className="">
                     <Chart type="bar" data={data} options={options} />
                 </div>
             </div>

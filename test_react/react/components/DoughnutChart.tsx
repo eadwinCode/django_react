@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Chart} from 'primereact/chart';
+import ReactDOM from 'react-dom';
 
 export class DoughnutChartDemo extends Component {
 
@@ -24,19 +25,22 @@ export class DoughnutChartDemo extends Component {
 
         return (
             <div>
-                <div className="content-section introduction">
-                    <div className="feature-intro">
+                <div className="">
+                    <div className="">
                         <h1>DoughnutChart</h1>
                         <p>A doughnut chart is a variant of the pie chart, with a blank center allowing for additional information about the data as a whole to be included.</p>
                     </div>
                 </div>
 
-                <div className="content-section implementation">
+                <div className="">
                     <Chart type="doughnut" data={data} />
                 </div>
-
-                <DoughnutChartDemoDoc></DoughnutChartDemoDoc>
             </div>
         )
     }
 }
+
+ReactDOM.render(
+	<DoughnutChartDemo/>,
+  document.getElementById('root')
+);

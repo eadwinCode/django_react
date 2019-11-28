@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Chart} from 'primereact/chart';
+import ReactDOM from 'react-dom';
 
 export class LineChartDemo extends Component {
 
@@ -93,14 +94,14 @@ export class LineChartDemo extends Component {
 
         return (
             <div>
-                <div className="content-section introduction">
-                    <div className="feature-intro">
+                <div className="">
+                    <div className="">
                         <h1>LineChart</h1>
                         <p>A line chart or line graph is a type of chart which displays information as a series of data points called 'markers' connected by straight line segments.</p>
                     </div>
                 </div>
 
-                <div className="content-section implementation">
+                <div className="">
                     <h3>Basic</h3>
                     <Chart type="line" data={data} />
 
@@ -114,3 +115,8 @@ export class LineChartDemo extends Component {
         )
     }
 }
+
+ReactDOM.render(
+	<LineChartDemo/>,
+  document.getElementById('root')
+);

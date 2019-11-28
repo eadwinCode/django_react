@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Chart} from 'primereact/chart';
+import ReactDOM from 'react-dom';
 
 export class PieChartDemo extends Component {
 
@@ -38,3 +39,8 @@ export class PieChartDemo extends Component {
         )
     }
 }
+
+ReactDOM.render(
+	<PieChartDemo/>,
+  document.getElementById('root')
+);

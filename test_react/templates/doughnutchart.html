@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load compress %}
+{% load private_static %}
+
+{% block content %}
+    <div class="container">
+        <div class="row justify-content-center pt-5">
+            <div class="col-md-8 text-center">
+                <div id="root"></div>
+            </div>
+        </div>
+    </div>
+    {% compress parcel file myts %}
+        <script src="{% private_static 'components/DoughnutChart.tsx' %}"></script>
+    {% endcompress %}
+{% endblock content %}
