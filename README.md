@@ -1,5 +1,5 @@
 # django_react
-Integrating ReactJs seamlessly with django-compressor-parceljs without webpack into your django project
+Integrating ReactJs seamlessly using django-compressor-parceljs without webpack in your django project
 
 ## Quick Start
 For development: 
