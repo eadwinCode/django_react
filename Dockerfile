@@ -1,9 +1,18 @@
-FROM node:10-stretch
-LABEL maintainer="eadwinCode"
+FROM python:3.6-alpine
 
-RUN apt-get update \
-    && apt-get install -y python python-dev python-pip \
-    && apt-get clean && rm -rf /var/cache/apt/* && rm -rf /var/lib/apt/lists/* && rm -rf /tmp/*
+LABEL maintainer="eadwinCode" 
+
+RUN apk update && apk upgrade && \
+    echo "**** other packages *****" && \
+    apk add --update npm && \
+    apk add --virtual build-deps && \
+    apk add --no-cache \
+        sqlite \
+        python3-dev \
+        libpq \
+        gcc\
+        musl-dev\
+    && apk del build-deps/
 
 
 ENV LANG C.UTF-8
