@@ -30,4 +30,8 @@ COPY . /home/docker/code/
 
 EXPOSE 80
 
+RUN adduser -D django_react
+
+USER django_react
+
 CMD ["python", "manage.py", "runserver"]
